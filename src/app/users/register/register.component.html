@@ -1,0 +1,37 @@
+<h2>Registration Form</h2>
+
+<form [formGroup]="registrationForm" (ngSubmit)="submitForm()">
+    <div class="div">*First Name : <input type="text" formControlName='firstName'></div>
+   <p class="error" *ngIf="registrationForm.get('firstName').invalid && registrationForm.get('firstName').touched"> *Please enter name</p> 
+    <div class="div">*Last Name : <input type="text" formControlName='lastName'></div>
+    <p class="error" *ngIf="registrationForm.get('lastName').invalid && registrationForm.get('lastName').touched"> *Please enter last name</p>
+
+    <div class="div">*Email Id : <input type="text" formControlName='email'></div>
+    <p class="error" *ngIf="registrationForm.get('email').invalid && registrationForm.get('email').touched"> *Please enter valid email</p>
+
+    <div class="div">*Phone number :
+        <select>
+            <option value="">+91</option>
+            <option value="">+81</option>
+            <option value="">+71</option>
+            <option value="">+61</option>
+            <option value="">+51</option>
+        </select>
+        <input type="text" formControlName="phone">
+    </div>
+    <p class="error" *ngIf="registrationForm.get('phone').invalid && registrationForm.get('phone').touched"> *Please enter valid phone number</p>
+
+    <div class="div">*Password : <input type="text" formControlName="password"></div>
+    <p class="error" *ngIf="registrationForm.get('password').invalid && registrationForm.get('password').touched"> *Please enter valid password</p> 
+
+    <div class="div">Confirm password : <input type="text" formControlName="confirmPassword"></div>
+     <p class="error" *ngIf="registrationForm.get('confirmPassword').invalid && registrationForm.get('confirmPassword').touched"> *Please confirm the password</p>
+
+    <div class="div">*Address : <input type="text" formControlName="address"></div>
+     <p class="error" *ngIf="registrationForm.get('address').invalid && registrationForm.get('address').touched"> *Please fill the address</p>
+
+    <div class="div"><button class="btn" (click)="loginNavigation()" type="submit" [disabled]="!registrationForm.valid">Submit</button><button class="btn" (click)="loginNavigation()">Login Here</button>
+    <button class="btn" (click)="clear()">clar</button>
+    </div>
+</form>
+<div *ngFor="let item of abc">{{item}}</div>

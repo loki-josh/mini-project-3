@@ -1,0 +1,14 @@
+<div class="div1">
+<h2 >Login Form</h2>
+<form [formGroup]="loginForm" class="form"  (ngSubmit)="submitForm()">
+   
+    <div>Email Id : <input class="input" type="text" formControlName='email'></div>
+    <p class="error" *ngIf="loginForm.get('email').invalid && loginForm.get('email').touched"> *Please enter valid email</p> 
+   
+    <div>Password : <input class="input" type="text" formControlName="password"></div>
+    <p class="error" *ngIf="loginForm.get('password').invalid && loginForm.get('password').touched"> *Please enter valid password</p> 
+
+    <div><button type="submit" (click)="submitForm()">Login</button></div>
+
+</form>
+</div>

@@ -1,0 +1,58 @@
+
+<app-header></app-header>
+
+
+<div class="row ">
+    <div class="col-2 left_nav" >
+      <option class="left_nav_element" value=""><button>options</button></option>
+      <option class="left_nav_element" value=""><button>options</button></option>
+      <option class="left_nav_element" value=""><button>options</button></option>
+      <option class="left_nav_element" value=""><button>options</button></option>
+      <option class="left_nav_element" value=""><button>options</button></option>
+      <option class="left_nav_element" value=""><button>options</button></option>
+      <option class="left_nav_element" value=""><button>options</button></option>
+      <option class="left_nav_element" value=""><button>options</button></option>
+      <option class="left_nav_element" value=""><button>options</button></option>
+      <option class="left_nav_element" value=""><button>options</button></option>
+      <option class="left_nav_element" value=""><button>options</button></option>
+      <option class="left_nav_element" value=""><button>options</button></option>
+      <option class="left_nav_element" value=""><button>options</button></option>
+      <option class="left_nav_element" value=""><button>options</button></option>
+    </div>
+    
+
+    <div class="col-4 section_1" >
+        <div class="inputField">
+            Enter currency in INR : 
+            <input type="number" [(ngModel)]="value">
+            <button (click)="convertion()">Convert</button>
+        </div>
+
+    </div>
+    
+    <div class="col-5 section_2">
+        <label class="dropdown" for="">Select the currency :&nbsp; </label>
+        <select class="dropdown" name="" id="drop" value="" (change)="selectChange($event)">
+            
+            <option value="" selected>Select currency</option>
+            <option value="US_Dollars">US Dollars</option>
+            <option value="Euro">Euro</option>
+            <option value="British_Pound">British Pound</option>
+            <option value="Australian_Dollars">Australian Dollars</option>
+            <option value="UAE_Dirham">UAE Dirham</option>
+
+        </select>
+        <div class="result">Converted currency : {{converted}} </div>
+       
+
+    </div>
+    
+
+</div>
+
+
+
+
+
+<app-footer></app-footer>
+

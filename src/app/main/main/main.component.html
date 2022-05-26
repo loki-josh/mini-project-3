@@ -42,7 +42,18 @@
             <option value="UAE_Dirham">UAE Dirham</option>
 
         </select>
-        <div class="result">Converted currency : {{converted}} </div>
+        <div class="result">Converted currency : {{converted}}  </div>
+        <p>Usinng pipes</p>
+        <div>{{salary | currency:'USD'}}  => currency</div>
+        <div>{{ date | date }} =>date</div>
+        <div>{{ value_expression | uppercase }} =>uppercase</div>
+        <div>{{ value_expression | lowercase }} => lowercase</div>
+        <div>{{ value_expression | titlecase }} =>titlecase</div>
+
+        
+
+        
+
        
 
     </div>

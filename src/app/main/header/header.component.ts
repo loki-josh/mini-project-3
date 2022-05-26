@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { SharedService } from 'src/app/shared/shared.service';
 
 @Component({
@@ -7,16 +7,31 @@ import { SharedService } from 'src/app/shared/shared.service';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
- selectedValue:any
-  constructor() { }
+  @Input() data!: string;
+  selectedValue: any
+  optionVaalue: any
+
+  constructor(private sharedServiece: SharedService) {
+    
+  }
 
   ngOnInit(): void {
-this.selectedValue = localStorage.getItem('firstname')
 
   }
 
-  
- 
+  selectChange(event: any) {
+    this.optionVaalue = event.target.value
+    this.sharedServiece.sendMassage(this.optionVaalue)
+
+   
+
+   
+    
+    
+  }
+
+
+
 
 }
 

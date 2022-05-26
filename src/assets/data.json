@@ -1,0 +1,22 @@
+{
+    "name":"lokesh",
+    "details":{
+        "address":"khammam",
+        "phone":"9573269542",
+        "pincode": "507304"
+
+    },
+    "friends": [
+        {
+            "name":"swaroop",
+            "phone":"944336546"
+        },
+        {
+            "name":"anil",
+            "phone":"939433445"
+        }
+    ],
+    "is_registerd":"true"
+
+    
+}

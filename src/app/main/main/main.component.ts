@@ -10,14 +10,19 @@ import { SharedService } from 'src/app/shared/shared.service';
 export class MainComponent implements OnInit {
   value:any
   converted:any
- 
+  sahredvalue:any
+  salary = 1000;
+  date = 12122020
+  value_expression = "lokesh"
+  
  
   selectedcurrency:any 
-  constructor() {}
+  constructor(private SharedService:SharedService) { }
 
   ngOnInit(): void {
+  console.log(this.SharedService.recieaveMassage())
   
-   
+
   }
 
   selectChange(event:any){
@@ -28,7 +33,7 @@ export class MainComponent implements OnInit {
     if(this.selectedcurrency == "US_Dollars" ){
       this.converted = this.value * 77
     }
-    if(this.selectedcurrency == "Euro" ){
+    if(this.selectedcurrency == "Euro" ){   
       this.converted = this.value * 81
     }
     if(this.selectedcurrency == "British_Pound" ){
@@ -44,7 +49,7 @@ export class MainComponent implements OnInit {
       this.converted = this.value * 49
     }
 
-    console.log(this.value)
+    // console.log(this.value)
   
   }
 

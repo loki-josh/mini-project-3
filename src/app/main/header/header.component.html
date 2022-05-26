@@ -14,7 +14,19 @@
         <div class="col-1 header_element"></div>
         <div class="col-2 header_element"></div>
         <div class="col-2 header_element">convertion type</div>
-        <div class="col-2 header_element"></div>
+        <div class="col-2 header_element">
+            <select class="dropdown" name="" id="drop" value="" (change)="selectChange($event)">
+            
+                <option value="" selected>Select currency</option>
+                <option value="US_Dollars">US Dollars</option>
+                <option value="Euro">Euro</option>
+                <option value="British_Pound">British Pound</option>
+                <option value="Australian_Dollars">Australian Dollars</option>
+                <option value="UAE_Dirham">UAE Dirham</option>
+    
+            </select>
+            
+        </div>
 
         <div class="col-3 header_element">Welcome : {{selectedValue}}</div>
 

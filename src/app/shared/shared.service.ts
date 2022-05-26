@@ -4,23 +4,25 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class SharedService {
-  displayMassage:any
-  r_massage:any
-  dropdown_input_Value:any
-  dripdown_output_value:any
-  x:any;
-  constructor() { }
+  username = 'lokesh'
+  password = '123'
+  displayMassage: any
+  r_massage: any
+  constructor() {}
 
-
-  sendMassage(s_massage:any){
+  sendMassage(s_massage: any) {
     this.displayMassage = s_massage;
+     this.recieaveMassage()
+     console.log(this.r_massage)
 
   }
 
-  recieaveMassage(){
-     return this.r_massage = this.displayMassage;
+  recieaveMassage() {
+   return this.r_massage = this.displayMassage;
+  //  console.log(this.r_massage)
+    
 
   }
-  
+
 
 }

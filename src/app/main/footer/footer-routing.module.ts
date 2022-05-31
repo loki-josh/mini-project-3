@@ -5,7 +5,7 @@ import { AuthGuard } from 'src/app/shared/auth.guard';
 import { FooterChildComponent } from './footer-child/footer-child.component';
 
 const routes: Routes = [
-  {path:'footer1', component:FooterChildComponent, canActivateChild:[AuthChild2Guard] }
+  {path:'footer1', component:FooterChildComponent }
 ];
 
 @NgModule({

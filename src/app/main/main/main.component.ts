@@ -20,7 +20,7 @@ export class MainComponent implements OnInit {
   constructor(private SharedService:SharedService) { }
 
   ngOnInit(): void {
-  console.log(this.SharedService.recieaveMassage())
+  this.SharedService.recieaveMassage()
   
 
   }
